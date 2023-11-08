@@ -41,7 +41,7 @@ def pedirNumero(msj: str) -> float:
     try:
         numero = float(input(msj))
     except:
-       print("**Error** Número introducido no válido")
+        print("**Error** Número introducido no válido")
 
     return numero
 
