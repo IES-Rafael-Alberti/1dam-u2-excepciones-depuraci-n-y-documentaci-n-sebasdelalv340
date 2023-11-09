@@ -3,16 +3,30 @@
 
 
 def ordLista(a):
-    for i in range(len(a) - 1):
-        for j in range(len(a) - 1 - i):
-            if a[j] > a[j+1]:
-                a[j], a[j+1] = a[j+1], a[j]
+    """Ordenar una lista de la que no conocemos sus elementos."""
+
+    """
+    Args:
+        a (list) = lista que contiene los elementos a ordenar
+        
+    Return:
+        Lista ordenada de menor a mayor.
+    """
+
+    """ El primer bucle (padre) nos da el número de pasadas sobre la lista.
+        Mientras que el segundo bucle (hijo) nos dá el número de comparaciones por pasada.
+    """
+
+    for i in range(len(a) - 1): # 'i' es el número de pasada en el rango.
+        for j in range(len(a) - 1 - i): # 'j' es el índice dentro del rango 'i'.
+            if a[j] > a[j+1]: # Comparo el valor de la posición 'j' con la siguiente.
+                a[j], a[j+1] = a[j+1], a[j] # Intercambio la posición si se cumple.
 
 
 def main():
     a = [8, 3, 1, 19, 14]
-    ordLista(a)
-    print(a)
+    print(ordLista(a))
+    
 
     
 if __name__ == "__main__":
