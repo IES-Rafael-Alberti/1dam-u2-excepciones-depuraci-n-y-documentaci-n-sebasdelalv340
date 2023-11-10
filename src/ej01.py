@@ -1,26 +1,28 @@
 """Ejercicio 2.3.1
     Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 """
-def pedirEdad(edad):
-    """Mostrar el rango de la edad introducida"""
+def pedirEdad(edad: int) -> str:
+    """Mostrar el rango de la edad introducida
 
-    """
+    
     Args:
         edad (int): El valor introducido por el usuario.
         
     Return:
-        Una cadena con la serie desde el 1 hasta edad separado por guiones.
-        """
+        (str): Una cadena con la serie desde el 1 hasta edad separado por guiones.
+    """
 
     if edad < 1:
         raise ValueError("La edad es incorrecta") # Capturar valores menores a 1
     
+    result = ""
     for i in range (1, edad + 1):
         if i < edad:
-            print(i, end= "-")
+            result += str(i) + ", "
         else:
-            print(i, end= "")
-    return ""
+            result += str(edad)
+            
+    return result
 
     
 def main():

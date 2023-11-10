@@ -3,14 +3,14 @@
 
 
 def ordLista(a):
-    """Ordenar una lista de la que no conocemos sus elementos."""
+    """Ordenar una lista de la que no conocemos sus elementos.
 
-    """
+    
     Args:
-        a (list) = lista que contiene los elementos a ordenar
-        
+        a (list) = Lista que contiene los elementos a ordenar
+
     Return:
-        Lista ordenada de menor a mayor.
+        (list): Lista ordenada de menor a mayor.
     """
 
     """ El primer bucle (padre) nos da el número de pasadas sobre la lista.
@@ -26,11 +26,8 @@ def ordLista(a):
 def main():
     a = [8, 3, 1, 19, 14]
     print(ordLista(a))
-    
 
-    
+
+
 if __name__ == "__main__":
     main()
-
-
-
