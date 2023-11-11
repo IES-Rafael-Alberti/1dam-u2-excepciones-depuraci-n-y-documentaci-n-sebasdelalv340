@@ -13,18 +13,17 @@ def pedirNumero(n):
     
     if n is float:
         raise ValueError("La entrada no es correcta.")
+    else:
+        return n
     
 
 def main():
-    n = None
+
     try:
         n = int(input("Introduce un número: "))
         print(pedirNumero(n))    
-    except ValueError: # Capturo tanto si es 'float' como si está vacío.
-        if n == None:
-            print("Por favor, introduzca un número.")
-        else:
-            print("El número es incorrecto.")
+    except ValueError: # Capturo si es 'float'
+        print("La entrada no es correcta.")
     
 
 

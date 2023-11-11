@@ -4,13 +4,13 @@ from src.ej3 import cuentaRegresiva
 @pytest.mark.parametrize(
     "input_n, expected",
     [
-        (9, "1, 3, 5, 7, 9"),
-        (8, "1, 3, 5, 7")
+        (10, "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0"),
+        (3, "3, 2, 1, 0")
     ]
 )
 def test_cuentaRegresiva_params(input_n, expected):
     assert cuentaRegresiva(input_n) == expected
 
-def test_cuentaRegresiva_ValueError():
-    with pytest.raises(ValueError):
-        cuentaRegresiva()
+def test_cuentaRegresiva_Exception():
+    with pytest.raises(Exception):
+        cuentaRegresiva(0)

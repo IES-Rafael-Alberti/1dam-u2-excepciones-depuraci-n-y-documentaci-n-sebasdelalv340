@@ -23,6 +23,7 @@ def ordLista(a):
                 a[j], a[j+1] = a[j+1], a[j] # Intercambio la posición si se cumple.
     return a
 
+
 def main():
     a = [8, 3, 1, 19, 14]
     print(ordLista(a))
