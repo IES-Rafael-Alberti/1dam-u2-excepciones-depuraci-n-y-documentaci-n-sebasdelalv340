@@ -21,7 +21,7 @@ def ordLista(a):
         for j in range(len(a) - 1 - i): # 'j' es el índice dentro del rango 'i'.
             if a[j] > a[j+1]: # Comparo el valor de la posición 'j' con la siguiente.
                 a[j], a[j+1] = a[j+1], a[j] # Intercambio la posición si se cumple.
-
+    return a
 
 def main():
     a = [8, 3, 1, 19, 14]

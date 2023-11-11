@@ -1,4 +1,4 @@
-"""Ejercicio 2.3.2¶
+"""Ejercicio 2.3.2
     Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas."""
 
 
@@ -16,10 +16,12 @@ def numerosImpares(n: int) -> str:
     if n < 1:
         raise ValueError("El número es incorrecto") # Capturo los números inferiores a 1
 
-    result: int = ""
+    result = ""
 
     for i in range (1, n +1):
-        if i == n: # Si el bucle llega a 'n' termina
+        if i % 2 == 0 and i == n: # Si el bucle llega a 'n' termina
+            result = result[:-2]
+        elif i % 2 != 0 and i == n:
             result += str(n)
         elif i % 2 != 0: # Si el resto es distinto de 0 (impar), lo imprime
             result += str(i) + ", "
